@@ -2,7 +2,7 @@
 	<div class="recommend">
 		<div class="recommend-title">热销推荐</div>
 		<ul>
-			<li class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id">
+			<li class="recommend-item border-bottom" v-for="item of list" :key="item.id">
 				<img :src="item.imgUrl" class="item-img">
 				<div class="item-info">
 					<h3 class="item-title">{{item.title}}</h3>
@@ -17,7 +17,10 @@
 <script>
 export default {
 	name: 'HomeRecommend',
-	data () {
+	props: {
+		list: Array
+	}
+	/*data () {
 		return {
 			recommendList: [{
         		"id": "1",
@@ -46,7 +49,7 @@ export default {
       		  	"desc": "各种亚热带植物掩映其间仿佛置身热带雨林"
       		}]
 		}
-	}
+	}*/
 }
 </script>
 

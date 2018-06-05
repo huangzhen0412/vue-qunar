@@ -2,7 +2,7 @@
 	<div class="weekend">
 		<div class="weekend-title">周末去哪儿</div>
 		<ul>
-			<li class="weekend-item border-bottom" v-for="item of WeekendList" :key="item.id">
+			<li class="weekend-item border-bottom" v-for="item of list" :key="item.id">
 				<div class="item-img-wrapper">
 					<img :src="item.imgUrl" class="item-img">
 				</div>
@@ -18,7 +18,10 @@
 <script>
 export default {
 	name: 'HomeWeekend',
-	data () {
+	props: {
+		list: Array
+	}
+	/*data () {
 		return {
 			WeekendList: [{
     		    "id": "0001",
@@ -47,7 +50,7 @@ export default {
     		    "desc": "带宝贝观看演出，近距离体验艺术的无穷魅力"
     		}]
 		}
-	}
+	}*/
 }
 </script>
 
@@ -57,11 +60,10 @@ export default {
 		line-height .8rem
 		background #eee
 		text-indent .2rem
-		margin-top .2rem
 	.item-img-wrapper
 		height 0
 		overflow hidden
-		padding-bottom 33.9%
+		padding-bottom 37.09%
 		.item-img
 			width 100%
 	.item-info
