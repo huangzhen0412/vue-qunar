@@ -34,10 +34,16 @@ export default {
 			}
 		}
 	},
-	activated () {
+	/*activated () {
 		window.addEventListener('scroll', this.handleScroll)
 	},
 	deactivated () {
+		window.removeEventListener('scroll', this.handleScroll)
+	},*/
+	mounted () {
+		window.addEventListener('scroll', this.handleScroll)
+	},
+	beforeDestroy () {
 		window.removeEventListener('scroll', this.handleScroll)
 	}
 }
